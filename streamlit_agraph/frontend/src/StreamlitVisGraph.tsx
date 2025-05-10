@@ -21,8 +21,10 @@ function StreamlitVisGraph() {
     ,
     doubleClick: (event) => {
       const lookupNode = lookupNodeId(event.nodes[0], graph.nodes);
+      console.log(lookupNode)
       if (lookupNode && lookupNode.link) {
         const link = lookupNode.link;
+        console.log(link)
         if (link) {
           window.open(link);
         }
