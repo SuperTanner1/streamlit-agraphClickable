@@ -23,7 +23,7 @@ function StreamlitVisGraph() {
       const lookupNode = lookupNodeId(event.nodes[0], graph.nodes);
       console.log(lookupNode)
       console.log(lookupNode.link)
-      if (lookupNode && lookupNode.link) {
+      if (lookupNode) {
         const link = lookupNode.link;
         if (link) {
           window.open(link);
