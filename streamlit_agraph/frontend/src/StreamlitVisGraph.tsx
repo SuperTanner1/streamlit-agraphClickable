@@ -15,20 +15,16 @@ function StreamlitVisGraph() {
   const graph: GraphData = {nodes: graphIn.nodes.slice(), edges: graphIn.edges.slice()}
 
   const events: GraphEvents = {
+    /*
     selectNode: (event) => {
       Streamlit.setComponentValue(event.nodes[0]);
     }
-    ,
+    */
     doubleClick: (event) => {
       const lookupNode = lookupNodeId(event.nodes[0], graph.nodes);
       console.log(lookupNode)
-      console.log(lookupNode.link)
-      if (lookupNode) {
-        const link = lookupNode.link;
-        if (link) {
-          window.open(link);
-        }
-      }
+      console.log(lookupNode.label)
+      Streamlit.setComponentValue(lookupNode.label)
     }
   };
 
