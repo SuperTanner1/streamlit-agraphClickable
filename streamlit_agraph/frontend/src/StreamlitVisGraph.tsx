@@ -33,7 +33,6 @@ function StreamlitVisGraph() {
       <VisGraph
         graph={graph}
         options={options}
-        events={events}
         ref = {(network: any) => {
           // console.log(network)
         }}
