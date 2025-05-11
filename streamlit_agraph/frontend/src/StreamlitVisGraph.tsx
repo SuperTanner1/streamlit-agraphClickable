@@ -13,13 +13,13 @@ function StreamlitVisGraph() {
   const lookupNodeId = (lookupNode, myNodes) => myNodes.find(node => node.id === lookupNode);
 
   const graph: GraphData = {nodes: graphIn.nodes.slice(), edges: graphIn.edges.slice()}
-
+/*
   const events: GraphEvents = {
-    /*
+    
     selectNode: (event) => {
       Streamlit.setComponentValue(event.nodes[0]);
     }
-    */
+    
     doubleClick: (event) => {
       const lookupNode = lookupNodeId(event.nodes[0], graph.nodes);
       console.log(lookupNode)
@@ -27,12 +27,13 @@ function StreamlitVisGraph() {
       Streamlit.setComponentValue(lookupNode.label)
     }
   };
-
+*/
   return (
     <span>
       <VisGraph
         graph={graph}
         options={options}
+        // events = {events}
         ref = {(network: any) => {
           // console.log(network)
         }}
